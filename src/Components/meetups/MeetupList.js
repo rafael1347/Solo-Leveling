@@ -1,17 +1,13 @@
-import MeetupItem from './MeetupItem';
-import './MeetupList.css'
+import MeetupItem from "./MeetupItem";
+import "./MeetupList.css";
 const MeetupList = (props) => {
-    return ( 
-        <div>
+  return (
+    <div>
       {props.meetups.map((meetup) => (
-        <MeetupItem
-          key={meetup.id}
-          id={meetup.id}
-          image={meetup.image}
-        />
+        <MeetupItem key={meetup.id} id={meetup.id} image={meetup.image} />
       ))}
     </div>
-     );
-}
- 
+  );
+};
+
 export default MeetupList;
