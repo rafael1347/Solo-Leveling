@@ -1,5 +1,37 @@
 .main {
-    margin: 3rem auto;
-    width: 90%;
-    max-width: 40rem;
-  }
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+.btn-Last {
+  padding: 1rem 1.6rem;
+  background-color: #1f57d3;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2rem;
+  display: inline-block;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  width: 50%;
+}
+.btn-Next {
+  padding: 1rem 1.6rem;
+  background-color: #1f57d3;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2rem;
+  display: inline-block;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  width: 50%;
+}
+.Fixed {
+  position: fixed;
+  bottom: 50px;
+}

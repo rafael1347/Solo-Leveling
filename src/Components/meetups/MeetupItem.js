@@ -1,16 +1,6 @@
-import './MeetupItem.css';
-import Card from '../ui/Card';
+import "./MeetupItem.css";
 
 const MeetupItem = (props) => {
-    return ( 
-        
-          
-      
-        <img className='image' src={props.image}/>
-      
-      
-    
-     );
-}
- 
+  return <img className="image" src={props.image} />;
+};
 export default MeetupItem;
