@@ -10,8 +10,8 @@ function App() {
     <div>
       <Layout>
         <Routes>
-          <Route path="/" element={<MangaDisplay />} />
-          <Route path="/AllMeetups" element={<AllMeetups />} />
+          <Route path="/" element={<AllMeetups />} />
+          <Route path="/Chapters" element={<MangaDisplay />} />
         </Routes>
       </Layout>
     </div>

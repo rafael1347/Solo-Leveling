@@ -6,8 +6,11 @@ const Navbar = () => {
       <div className="logo">Solo Leveling</div>
       <nav>
         <ul>
-          <li>
+          <li style={{ border: "none", padding: 0 }}>
             <Link to="/">Home</Link>
+          </li>
+          <li style={{ border: "none", padding: 0 }}>
+            <Link to="/Chapters">Chapters</Link>
           </li>
         </ul>
       </nav>
