@@ -25,15 +25,57 @@ const MangaDisplay = () => {
     const pages = [];
     while (i <= results.pageLimit) {
       const key = i;
-      if (results.id == 168 || results.id < 118) {
+      if (results.id == 154 || results.id == 164) {
+        if (i < 10 && results.id != 164) {
+          const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/Chapter-${results.id}/00${i}.jpg`;
+          ++i;
+          const page = {
+            id: key,
+            image: entry,
+          };
+          /// 111 to 116 is not showing
+          pages.push(page);
+        } else if (i > 10 && results.id != 164) {
+          const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/Chapter-${results.id}/0${i}.jpg`;
+          ++i;
+          const page = {
+            id: key,
+            image: entry,
+          };
+          /// 111 to 116 is not showing
+          pages.push(page);
+        } else {
+          const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/${results.id}/${i}.jpg`;
+          ++i;
+          const page = {
+            id: key,
+            image: entry,
+          };
+          /// 111 to 116 is not showing
+          pages.push(page);
+        }
+      } else if (
+        results.id == 149 ||
+        results.id == 148 ||
+        results.id == 147 ||
+        results.id == 146 ||
+        results.id == 145 ||
+        results.id == 144 ||
+        results.id == 133 ||
+        results.id == 123 ||
+        results.id == 117 ||
+        results.id == 168 ||
+        results.id < 111
+      ) {
         const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/${i}.jpg`;
         ++i;
         const page = {
           id: key,
           image: entry,
         };
+        /// 111 to 116 is not showing
         pages.push(page);
-      } else if (results.id > 117 && results.id < 150) {
+      } else if (results.id > 110 && results.id < 150) {
         const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Vol.2-Chapter-${results.id}/${i}.jpg`;
         ++i;
         const page = {
@@ -41,8 +83,15 @@ const MangaDisplay = () => {
           image: entry,
         };
         pages.push(page);
-      } else if (results.id > 149 && results.id < 165) {
-        if (i < 10 && results.id != 164) {
+      } else if (
+        results.id != 164 &&
+        results.id != 163 &&
+        results.id != 153 &&
+        results.id != 152 &&
+        results.id > 149 &&
+        results.id < 165
+      ) {
+        if (i < 10 && results.id != 164 && results.id != 163) {
           const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/00${i}.jpg`;
           ++i;
           const page = {
@@ -60,7 +109,12 @@ const MangaDisplay = () => {
           };
           pages.push(page);
         }
-      } else if (results.id > 164) {
+      } else if (
+        results.id != 163 ||
+        results.id == 153 ||
+        results.id == 152 ||
+        results.id > 164
+      ) {
         if (i < 10) {
           const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/0${i}.jpg`;
           ++i;
@@ -79,13 +133,23 @@ const MangaDisplay = () => {
           pages.push(page);
         }
       } else {
-        const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/0${i}.jpg`;
-        ++i;
-        const page = {
-          id: key,
-          image: entry,
-        };
-        pages.push(page);
+        if (i < 10) {
+          const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/0${i}.jpg`;
+          ++i;
+          const page = {
+            id: key,
+            image: entry,
+          };
+          pages.push(page);
+        } else {
+          const entry = `https://cdn.black-clover.org/file/sugois/solo-leveling/Chapter-${results.id}/${i}.jpg`;
+          ++i;
+          const page = {
+            id: key,
+            image: entry,
+          };
+          pages.push(page);
+        }
       }
     }
     //chapter 144 not working till 149
